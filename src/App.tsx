@@ -1,14 +1,21 @@
-import React from 'react';
-import './App.css';
-import { NavBar } from './components';
+import React from "react";
+import "./App.css";
+import { NavBar } from "./components";
+import { BrowserRouter } from "react-router-dom";
+import { AppRouter } from "./app/pages/helpers/AppRouter/AppRouter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <NavBar/>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <NavBar />
+        </header>
+        <main className="main">
+          <AppRouter />
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 

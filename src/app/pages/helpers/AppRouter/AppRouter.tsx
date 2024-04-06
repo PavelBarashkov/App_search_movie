@@ -1,7 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import { publicRoutes } from "../routes/routes";
 
-export const AppRouter:React.FC = () => {
+export const AppRouter: React.FC = () => {
   return (
-    <div>AppRouter</div>
-  )
-}
+    <Routes>
+      {publicRoutes.map(({ path, element }) => (
+        <Route key={path} path={path} element={element} />
+      ))}
+    </Routes>
+  );
+};
