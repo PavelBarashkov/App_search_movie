@@ -1,0 +1,12 @@
+.products {
+  width: 100%;
+}
+
+.list {
+  counter-reset: li;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 30px !important;
+}

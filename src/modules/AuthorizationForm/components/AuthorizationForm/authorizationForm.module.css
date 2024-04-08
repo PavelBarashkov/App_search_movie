@@ -1,0 +1,21 @@
+.form {
+  height: calc(100% - 56px);
+}
+
+.card {
+  background-color: var(--background-color-50);
+  color: var(--color-main);
+
+  box-shadow: 13px 12px 44px 8px rgba(0, 0, 0, 0.77);
+  -webkit-box-shadow: 13px 12px 44px 8px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 13px 12px 44px 8px rgba(0, 0, 0, 0.77);
+}
+
+.input {
+  padding: 5px;
+}
+
+.error_message {
+  color: brown;
+  text-align: start;
+}
