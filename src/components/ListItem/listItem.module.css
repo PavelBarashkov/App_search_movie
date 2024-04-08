@@ -1,26 +1,34 @@
 .item {
-  padding: 10px 0;
-  padding-left: 10px;
   position: relative;
   text-align: start;
   background: #5a5959;
-
+  padding: 8px 15px;
+  border-radius: 6px;
   color: var(--color-main);
+  cursor: pointer;
+  transition: 0.3s all;
 }
 
-.item:before {
-  padding: 10px 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -1.5em;
-  width: 1.875em;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  background: #ddac24;
-  border-bottom-left-radius: 70em;
-  border-top-left-radius: 70em;
-  counter-increment: li;
-  content: counter(li);
+.item:hover {
+  background-color: rgb(243, 158, 60);
+  color: black;
+}
+
+.item:active {
+  background-color: rgb(255, 138, 5);
+  color: black;
+}
+
+.itemLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+.itemLink_info {
+  display: flex;
+  column-gap: 8px;
+  font-size: 12px;
 }

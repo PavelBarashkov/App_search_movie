@@ -11,6 +11,14 @@
 }
 
 .main {
-  height: calc(100% - 56px);
+  padding-top: 45px;
   width: 100%;
+  height: calc(100% - 56px);
+}
+
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: 25px;
+  }
 }
