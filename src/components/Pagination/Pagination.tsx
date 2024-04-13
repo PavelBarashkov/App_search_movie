@@ -2,7 +2,12 @@ import React, { useEffect } from "react";
 import classes from "./paginatiom.module.css";
 import { usePagination } from "../../hooks/usePagination";
 
-export const Pagination: React.FC<any> = ({ pages, limit, handlePagination }) => {
+export const Pagination: React.FC<any> = ({
+  pages,
+  limit,
+  addPageInQueryParams,
+  initialPage
+}) => {
   const {
     firstContentIndex,
     lastContentIndex,
@@ -15,16 +20,15 @@ export const Pagination: React.FC<any> = ({ pages, limit, handlePagination }) =>
   } = usePagination({
     contentPerPage: limit,
     count: pages,
+    initialPage: initialPage
   });
 
   useEffect(() => {
-    handlePagination(page)
-  }, [page])
-
+    addPageInQueryParams(page);
+  }, [page]);
 
   return (
     <div className={classes.pagination}>
-    
       <button onClick={prevPage} className={classes.page}>
         &larr;
       </button>
@@ -45,12 +49,14 @@ export const Pagination: React.FC<any> = ({ pages, limit, handlePagination }) =>
         </button>
       ))}
       {gaps.after ? "..." : null}
-      <button
-        onClick={() => setPage(totalPages)}
-        className={`${classes.page} ${page === totalPages && classes.active}`}
-      >
-        {totalPages}
-      </button>
+      {!isNaN(totalPages) && (
+        <button
+          onClick={() => setPage(totalPages)}
+          className={`${classes.page} ${page === totalPages && classes.active}`}
+        >
+          {totalPages}
+        </button>
+      )}
       <button
         onClick={nextPage}
         className={`${classes.page} ${page === totalPages && "disabled"}`}

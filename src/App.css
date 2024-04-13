@@ -16,9 +16,30 @@
   height: calc(100% - 56px);
 }
 
-
 @media (max-width: 768px) {
   .main {
     padding-top: 25px;
   }
+}
+
+.custom-Input-Label {
+  color: rgb(243, 158, 60) !important;
+}
+
+.MuiOutlinedInput-notchedOutline  {
+  border-color: var(--color-main) !important;
+  
+}
+
+.MuiOutlinedInput-notchedOutline:hover  {
+  border-color: red !important;
+  
+}
+
+.MuiInputBase-root {
+  color: rgb(243, 158, 60) !important;
+}
+
+.MuiSvgIcon-root {
+  color: rgb(243, 158, 60) !important;
 }

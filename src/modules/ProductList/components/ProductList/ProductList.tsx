@@ -20,7 +20,7 @@ export const ProductList: React.FC = () => {
 
   useEffect(() => {
     if (products) {
-      dispatch(setProductList(products));
+      dispatch(setProductList({...products, isFetching: isFetching}));
     }
   }, [dispatch, products]);
 

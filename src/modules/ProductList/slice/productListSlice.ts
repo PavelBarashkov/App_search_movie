@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { ProductList } from "../../../interface";
 
 interface IProductSlice {
-    products?: ProductList
+    products?: any
 }
 
 const initialState: IProductSlice = {

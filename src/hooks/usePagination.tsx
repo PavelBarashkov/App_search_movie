@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
 interface Gap {
   before: boolean;
   paginationGroup: number[];
@@ -8,6 +7,7 @@ interface Gap {
 interface UsePaginationProps {
   contentPerPage: number;
   count: number;
+  initialPage: number;
 }
 interface UsePaginationReturn {
   page: number;
@@ -23,10 +23,12 @@ type UsePagination = (
   UsePaginationProps: UsePaginationProps
 ) => UsePaginationReturn;
 
-export const usePagination: UsePagination = ({ contentPerPage, count }) => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const pageNumber = searchParams.get("page");
-  const [page, setPage] = useState(pageNumber ? Number(pageNumber) : 1);
+export const usePagination: UsePagination = ({
+  contentPerPage,
+  count,
+  initialPage,
+}) => {
+  const [page, setPage] = useState(initialPage);
   const [gaps, setGaps] = useState<Gap>({
     before: false,
     paginationGroup: [],

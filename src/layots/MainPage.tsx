@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./mainPage.module.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { useSearchParams } from 'react-router-dom'
-import { Pagination } from "../Pagination/Pagination";
+import { Pagination } from "../components/Pagination/Pagination";
 
 interface IMainPageProps {
   aside: React.ReactNode;

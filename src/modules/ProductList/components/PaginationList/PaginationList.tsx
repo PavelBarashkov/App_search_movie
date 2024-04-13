@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { RootState } from "../../../../app/store";
 import { Pagination } from "../../../../components/Pagination/Pagination";
 
 export const PaginationList: React.FC = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
   const { products } = useSelector((state: RootState) => state.productList);
-  const handlePagination = (page: number) => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const pageForQueryParam = searchParams.get("page");
+
+  const [pageActive, setPageActive] = useState(
+    pageForQueryParam ? Number(pageForQueryParam) : 1
+  );
+
+  const addPageInQueryParams = (page: number) => {
     searchParams.set("page", `${page}`);
     setSearchParams(searchParams);
   };
@@ -16,7 +22,8 @@ export const PaginationList: React.FC = () => {
     <Pagination
       pages={products?.pages}
       limit={products?.limit}
-      handlePagination={handlePagination}
+      addPageInQueryParams={addPageInQueryParams}
+      initialPage={pageActive}
     />
   );
 };

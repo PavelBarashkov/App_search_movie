@@ -7,9 +7,6 @@ export const api = createApi({
     baseUrl: url,
   }),
 
-
-
-
   endpoints: (builder) => ({
     getProducts: builder.query({
       queryFn: async (arg) => {
@@ -25,8 +22,23 @@ export const api = createApi({
       },
       extraOptions: { maxRetries: 1 },
     }),
+    getCountries: builder.query({
+      queryFn: async () => {
+        try {
+          const response = await fetch(
+            url + "v1/movie/possible-values-by-field?field=countries.name",
+            {
+              method: "GET",
+              headers: { "X-API-KEY": `${process.env.REACT_APP_API_KEY}` },
+            }
+          );
+          return { data: await response.json() };
+        } catch (e: any) {
+          return { error: e.message };
+        }
+      },
+    }),
   }),
 });
 
-export const { useGetProductsQuery } = api;
-
+export const { useGetProductsQuery, useGetCountriesQuery } = api;
