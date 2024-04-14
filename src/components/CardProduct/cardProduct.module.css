@@ -1,0 +1,20 @@
+.row {
+    color: var(--color-main);
+    margin-top: 40px;
+    background-color: var(--background-color-50);
+    box-shadow: 13px 12px 44px 8px rgba(0, 0, 0, 0.77);
+    -webkit-box-shadow: 13px 12px 44px 8px rgba(0, 0, 0, 0.77);
+    -moz-box-shadow: 13px 12px 44px 8px rgba(0, 0, 0, 0.77);
+}
+
+.description_text {
+    text-indent: 25px;
+}
+
+.poster {
+    width: 100%;
+}
+
+.poster img{
+    width: 100%;
+}

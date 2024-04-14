@@ -1,39 +1,57 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.loading-container {
+  height: calc(100% - 56px);
 }
 
 .App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.main {
+  padding-top: 45px;
+  width: 100%;
+  height: calc(100% - 56px);
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
+@media (max-width: 768px) {
+  .main {
+    padding-top: 25px;
   }
 }
+
+.custom-Input-Label {
+  color: rgb(243, 158, 60) !important;
+}
+
+.MuiOutlinedInput-notchedOutline  {
+  border-color: var(--color-main) !important;
+  
+}
+
+.MuiOutlinedInput-notchedOutline:hover  {
+  border-color: red !important;
+  
+}
+
+.MuiInputBase-root {
+  color: rgb(243, 158, 60) !important;
+}
+
+.MuiSvgIcon-root {
+  color: rgb(243, 158, 60) !important;
+}
+
+.MuiFormLabel-root {
+  color: rgb(243, 158, 60) !important;
+}
+
+/* .base-Popper-root {
+  background-color: red !important;
+}
+
+.MuiAutocomplete-popper {
+  background-color: red !important;
+} */

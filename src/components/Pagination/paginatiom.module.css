@@ -1,0 +1,75 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  color: var(--color-main);
+}
+
+.text {
+  margin: 0;
+}
+
+.text span {
+  color: rgb(243, 158, 60);
+}
+
+.page {
+  padding: 5px 8px;
+  background-color: var(--background-color-50);
+  color: inherit;
+
+  border: none;
+  border-radius: 6px;
+}
+
+.page:hover {
+  background-color: rgb(243, 158, 60);
+  color: black;
+}
+
+.page:active {
+  background-color: rgb(255, 138, 5);
+  color: black;
+}
+
+.active {
+  background-color: rgb(243, 158, 60);
+  color: black;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  
+  margin-bottom: 15px;
+}
+
+.comment {
+  background-color: var(--background-color-50);
+  padding: 10px;
+
+  border-radius: 10px;
+}
+
+.poster {
+  display: flex;
+  column-gap: 10px;
+}
+
+.poster img{
+  width: 100px;
+  height: 150px;;
+}
+
+.posters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 410px) {
+  .pagination {
+    overflow-x: scroll;
+  }
+}
+

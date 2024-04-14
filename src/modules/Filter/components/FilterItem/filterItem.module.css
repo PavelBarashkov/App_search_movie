@@ -1,0 +1,22 @@
+.title {
+    color: var(--color-main);
+}
+
+.select {
+    width: 100%;
+    max-width: 350px;
+
+    padding: 8px 15px;
+
+    background-color: var(--background-color-50);
+    color:rgb(243, 158, 60);
+}
+
+.selectItem {
+    color: black;
+    padding: 5px 10px !important;
+}
+
+.selectItem:hover {
+    color: aqua !important;
+}

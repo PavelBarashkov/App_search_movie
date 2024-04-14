@@ -1,0 +1,55 @@
+.container {
+  color: var(--color-main);
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-top: 40px;
+  background-color: var(--background-color-50);
+  box-shadow: 13px 12px 44px 8px rgba(0, 0, 0, 0.77);
+  -webkit-box-shadow: 13px 12px 44px 8px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 13px 12px 44px 8px rgba(0, 0, 0, 0.77);
+}
+
+.col {
+  display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.title {
+  color: rgb(243, 158, 60);
+}
+
+.description_text {
+  text-indent: 25px;
+}
+
+.poster {
+  width: 100%;
+}
+
+.poster img {
+  width: 100%;
+}
+
+.carouselItem {
+  height: 320px;
+  cursor: pointer;
+}
+
+.carouselCardItem {
+  width: 100%;
+  height: 325px;
+}
+
+.rowSimilarMovies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carouselItemDiv {
+  max-width: 350px;
+}
+.carouselItemDiv img {
+  height: 100%;
+  object-fit: contain;
+}

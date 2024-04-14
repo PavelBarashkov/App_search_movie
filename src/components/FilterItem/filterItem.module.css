@@ -1,0 +1,30 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+select {
+  border: 0;
+  box-shadow: none;
+  flex: 1;
+  padding: 10px;
+  color: #fff;
+  background-color: var(--background-color-50);
+  background-image: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  border-radius: 0.25em;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+}
+
+.title {
+    color: var( --color-main);
+}
